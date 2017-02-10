@@ -20,13 +20,13 @@ namespace AzureExample
             txtResults.Text = string.Empty;
             var term = searchTermField.Text;
 
-            var key = "859249B4D2BE97C974E80949202E827F";
-            var serviceName = "bamtest";
+            var key = "34FF26DE3EDB6D194C5F93A87AF526A2";
+            var serviceName = "dev-bakingmad";
 
 
 
             SearchServiceClient serviceClient = new SearchServiceClient(serviceName, new SearchCredentials(key));
-            ISearchIndexClient indexClient = serviceClient.Indexes.GetClient("bm2");
+            ISearchIndexClient indexClient = serviceClient.Indexes.GetClient("example");
 
             var param = new Microsoft.Azure.Search.Models.SearchParameters();
             var Facets = new List<String>();

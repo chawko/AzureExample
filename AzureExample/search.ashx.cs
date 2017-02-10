@@ -21,8 +21,8 @@ namespace AzureExample
         {
             var term = context.Request.QueryString["term"];
 
-            var key = "859249B4D2BE97C974E80949202E827F";
-            var serviceName = "bamtest";
+            var key = "34FF26DE3EDB6D194C5F93A87AF526A2";
+            var serviceName = "dev-bakingmad";
             if (serviceClient == null)
             {
                 serviceClient = new SearchServiceClient(serviceName, new SearchCredentials(key));
@@ -30,7 +30,7 @@ namespace AzureExample
 
             if (indexClient == null)
             {
-                indexClient = serviceClient.Indexes.GetClient("bm2");
+                indexClient = serviceClient.Indexes.GetClient("example");
             }
 
             Microsoft.Azure.Search.Models.DocumentSuggestResult<SuggestItem> results = indexClient.Documents.Suggest<SuggestItem>(term, "suggest", new Microsoft.Azure.Search.Models.SuggestParameters() { UseFuzzyMatching = true });

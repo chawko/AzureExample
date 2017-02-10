@@ -168,6 +168,7 @@
     <Content Include="search.ashx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Json.aspx.cs">
       <DependentUpon>Json.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
